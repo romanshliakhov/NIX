@@ -1,0 +1,8 @@
+div {
+    width: 300px;
+    height: 200px;
+    background-color: #000;
+    background-image: url(nix.png);
+    background-repeat: round;
+    background-size: 25%;
+}

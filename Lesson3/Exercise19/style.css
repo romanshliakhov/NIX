@@ -1,0 +1,13 @@
+body {
+    padding: 50px;
+}
+
+div {
+    background-image: url(w3.png);
+    background-repeat: no-repeat;  
+    background-position: center; 
+    width: 200px;
+    height: 100px;      
+    background-clip: border-box;    
+    box-shadow: -20px 10px green, 20px 10px red;
+}

@@ -1,0 +1,11 @@
+p {
+    font-size: 2em;
+}
+
+span:first-of-type {
+    font-weight: bold;
+}
+
+span:last-of-type {
+    font-style: italic;
+}

@@ -1,0 +1,40 @@
+body {
+    color: #fff;
+}
+
+div {
+    height: auto;
+}
+
+.first {
+    float: left;
+    width: 25%;
+}
+
+.green {
+    margin-left: 25%;
+}
+
+.second {
+    float: right;
+    width: 25%;
+}
+
+.black {
+    margin-right: 25%;    
+}
+
+.center {
+    width: 33.3%;  
+    float: inherit;
+}
+
+.center:first-of-type {
+    float: right;    
+}
+
+.center:last-of-type {       
+    margin-left: 33.3%;        
+}
+
+

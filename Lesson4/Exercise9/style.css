@@ -1,0 +1,29 @@
+div {
+    width: 200px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    cursor: pointer;
+}
+
+.hover {
+    position: relative;    
+    transition: 3s;
+}
+
+.hover:hover .list {
+    display: block;
+    opacity: 1;          
+}
+
+.list {
+    background-color: red;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    transition: 0.7s ease-in; 
+}

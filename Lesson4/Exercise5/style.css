@@ -1,0 +1,19 @@
+span,
+div div {
+    border: solid 2px black;
+    width: 50px;
+    height: 50px;
+}
+
+.first span:nth-of-type(even) {
+    display: block;
+}
+
+.second div:nth-of-type(even) {
+    display: inline;    
+    margin-right: 10px;
+}
+
+.third span:nth-of-type(even) {
+    display: inline-block;
+}

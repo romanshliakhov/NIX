@@ -1,0 +1,12 @@
+body {
+    width: 1000px;
+}
+
+.aside {
+    width: 30%;
+    float: left;
+}
+
+.main {
+    margin-left: 30%;
+}

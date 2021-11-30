@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+}
+
+.wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    font-size: 36px;
+}
+
+.wrapper div {
+    width: 50%;   
+    height: 50%; 
+    display: block;
+}
+
+.first {
+    background-color: red;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.second {
+    background-color: green;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.third {
+    background-color: blue;
+    position: absolute;
+    right: 0;
+    top: 0;    
+}
+
+.fifth {
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

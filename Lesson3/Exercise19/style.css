@@ -6,8 +6,7 @@ div {
     background-image: url(w3.png);
     background-repeat: no-repeat;  
     background-position: center; 
-    width: 200px;
-    height: 100px;      
-    background-clip: border-box;    
-    box-shadow: -20px 10px green, 20px 10px red;
+    width: 250px;
+    height: 135px;  
+    box-shadow:  -25px -20px 5px 5px red, 20px -20px 5px 5px inset green, -20px 20px 5px 5px inset black, 25px 25px 5px 5px blue;
 }

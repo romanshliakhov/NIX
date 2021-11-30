@@ -22,19 +22,20 @@ div {
 
 .black {
     margin-right: 25%;    
+    height: 52px;
 }
 
 .center {
-    width: 33.3%;  
-    float: inherit;
+    width: 33.33%;  
+    float: left;
 }
 
 .center:first-of-type {
     float: right;    
 }
 
-.center:last-of-type {       
-    margin-left: 33.3%;        
-}
+/* .center:last-of-type {       
+   
+} */
 
 

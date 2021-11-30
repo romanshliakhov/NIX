@@ -2,11 +2,19 @@ body {
     width: 1000px;
 }
 
+div {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
 .aside {
     width: 30%;
     float: left;
+    border: 1px dashed #000;
 }
 
 .main {
     margin-left: 30%;
+    border: 1px solid #000;    
 }
+

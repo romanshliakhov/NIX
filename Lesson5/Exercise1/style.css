@@ -1,0 +1,39 @@
+div {
+    padding: 5px;
+    border: 2px solid black;
+    margin: 5px;    
+    flex-grow: 1;  
+}
+
+.flex-container {
+    display: flex;        
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .flex-container div:nth-child(n+3) {
+        background-color: yellow;
+        flex-grow: 2;
+    }
+
+    .flex-container div {
+        background-color: blue;  
+    }
+}
+
+@media (min-width: 501px) and (max-width: 599px) {
+    .flex-container div {
+        background-color: blue;  
+    }
+}
+
+@media (min-width: 401px) and (max-width: 500px) {
+    .flex-container div {
+        background-color: blue;    
+        flex-shrink: 0;    
+    }
+
+    .flex-container div:nth-child(even) {
+        background-color: yellow;    
+        flex-shrink: 2;    
+    }
+}

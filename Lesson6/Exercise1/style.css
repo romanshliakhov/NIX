@@ -1,28 +1,5 @@
-div {
-    border: 2px solid #000;
-    width: 10%;
+[class*="col-"] {
+    border: 1px black solid;
 }
-
-div:nth-of-type(odd) {
-    float: right; 
-}
-
-div:nth-of-type(even) {
-    float: left;
-}
-
-/* вариант с использованием классов */
-
-/* .first,
-.third,
-.fifth {
-    float: right;    
-}
-
-.second,
-.fourth,
-.sixth {
-    float: left;   
-} */
 
 

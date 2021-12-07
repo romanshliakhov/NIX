@@ -1,26 +1,2 @@
-div {
-    background-color: red; 
-    height: auto; 
-}
 
-div:nth-of-type(odd) {
-    background-color: green;
-    width: 30%;
-}
-
-.first {
-    float: right;   
-}
-
-.second {  
-    margin-right: 30%;  
-}
-
-.third {
-    float: left;      
-}
-
-.fourth {   
-    margin-left: 30%;
-}
 

@@ -1,2 +1,40 @@
+body {
+    display: flex;   
+    flex-direction: column;
+}
+
+div {
+    border: 1px solid #000;
+    flex-grow: 1;    
+}
 
 
+@media (min-width: 768px) {
+    body {
+        flex-wrap: wrap;
+        flex-direction: initial;        
+    }
+
+    div {
+        background-color: yellow;        
+    }
+
+    div:first-child,
+    div:last-child {
+        flex-basis: 100%;
+    }
+}
+
+
+@media (min-width: 992px) {
+    div {
+        background-color: red;  
+        flex-grow: 0;     
+        flex-basis: 20%; 
+    }
+
+    div:nth-child(3) {
+        flex-grow: 1;
+        margin: 0 10%;
+    }
+}

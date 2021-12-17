@@ -233,3 +233,135 @@
 // 1. Если введён пароль «Я главный», то выводить «Здравствуйте!»,
 // 2. Иначе – «Неверный пароль»,
 // 3. При отмене – «Отменено».
+
+// let enterLogin = prompt( 'Who's there?' , '' );
+
+// if ( enterLogin == 'Админ' ) {
+    
+//     let password = prompt( 'Пароль?', '' );
+    
+//     if ( password == 'Я главный' ) {
+//         alert( 'Здравствуйте!' );
+//     } else if ( password == '' || password == null ) {
+//         alert( 'Отменено' );
+//     } else {
+//         alert( 'Неверный пароль' );
+//     }
+    
+// } else {
+//     alert( 'I don't know you' );
+// }
+
+
+// Задание No23. Напишите "if", аналогичный "switch"
+// Напишите if..else, соответствующий следующему switch:
+// switch (browser) {
+//     case 'Edge':
+//     alert( "You've got the Edge!" );
+//     break;
+//     case 'Chrome':
+//     case 'Firefox':
+//     case 'Safari':
+//     case 'Opera':
+//     alert( 'Okay we support these browsers too' );
+//     break;
+//     default:
+//     alert( 'We hope that this page looks ok!' );
+// }
+
+
+// let browser;
+
+// if ( browser === 'Edge' ) {
+//     alert( "You've got the Edge!" );
+// } else if ( browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
+//     alert( 'Okay we support these browsers too');
+// } else {
+//     alert ( 'We hope that this page looks ok!' );
+// }
+
+
+// Задание No24. Переписать условия "if" на "switch"
+// Перепишите код с использованием одной конструкции switch:
+// let a = +prompt('a?', '');
+// if (a == 0) {
+//     alert( 0 );
+// }
+// if (a == 1) {
+//     alert( 1 );
+// }
+// if (a == 2 || a == 3) {
+//     alert( '2,3' );
+// }
+
+
+// switch(a) {
+//     case 0:
+//         alert( 0 );
+//         break;
+//     case 1: 
+//         alert( 1 );
+//         break;
+//     case 2:
+//     case 3:
+//         alert( 2,3 );       
+//         break;
+// }
+
+
+// Задание No25.
+
+// Дано целое число. Если оно является положительным, то прибавить к нему 1; в
+// противном случае не изменять его. Вывести полученное число.
+
+// let num = 1; 
+// let num = -1;
+
+// if ( num > 0) {
+//     ++num;
+// } 
+
+// console.log(num);
+
+
+// Задание No26.
+// Дано целое число. Если оно является положительным, то прибавить к нему 1; в
+// противном случае вычесть из него 2. Вывести полученное число.
+
+// let num = 10;
+// let num = -10;
+
+// if ( num > 0 ) {
+//     ++num;
+// } else {
+//     num -= 2;
+// }
+
+// console.log(num);
+
+
+// Задание No27.
+// Дано целое число. Если оно является положительным, то прибавить к нему 1; если
+// отрицательным, то вычесть из него 2; если нулевым, то заменить его на 10. Вывести
+// полученное число.
+
+
+// let num = 10;
+// let num = -10;
+// let num = 0;
+
+// if ( num > 0 ) {
+//     ++num;
+// } 
+// if ( num < 0 ) {
+//     num -= 2;
+// }
+// if ( num == 0 ) {
+//     num = 10;
+// }
+
+// console.log(num);
+
+
+// Задание No28.
+// Даны три целых числа. Найти количество положительных чисел в исходном наборе.

@@ -559,13 +559,36 @@
 // Задание No39.
 // Даны три числа. Найти сумму двух наибольших из них.
 
-// let a = 1;
+// let a = 5;
 // let b = 3;
 // let c = 9;
 
-
+// if ( a <= b ?? a <= c ) {
+//     console.log(b + c);
+// } else if ( a >=b ?? b <= c ) {
+//     console.log(a + c);
+// } else {
+//     console.log(a + b);
+// }
 
 
 // Задание No40.
 // Даны три целых числа, одно из которых отлично от двух других, равных между собой.
 // Определить порядковый номер числа, отличного от остальных.
+
+// let a = 5;
+// let b = 2;
+// let c = 2;
+// let differentNumber;
+
+// if ( a == b) {
+//     differentNumber = 3;
+//     console.log(differentNumber);
+// } else if ( a == c ) {
+//     differentNumber = 2;
+//     console.log(differentNumber);
+// } else if ( b == c ) {
+//     differentNumber = 1;
+//     console.log(differentNumber);
+// }
+

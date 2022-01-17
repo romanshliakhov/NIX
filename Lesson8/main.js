@@ -540,25 +540,25 @@
 // Даны две переменные целого типа: A и B. Если их значения не равны, то присвоить каждой переменной большее из этих значений, а если равны, то присвоить переменным нулевые значения. Вывести новые значения переменных A и B.
 
 
-let a = 5;
-let b = 5;
+// let a = 5;
+// let b = 5;
 
-if ( a != b) {
-    if (a > b) {
-        b = a;
-    } else {
-        a = b;
-    }    
+// if ( a != b) {
+//     if (a > b) {
+//         b = a;
+//     } else {
+//         a = b;
+//     }    
 
-    console.log(a);
-    console.log(b);
-} else if ( a == b ) {
-    a = 0;
-    b = 0;
+//     console.log(a);
+//     console.log(b);
+// } else if ( a == b ) {
+//     a = 0;
+//     b = 0;
 
-    console.log(a);
-    console.log(b);
-}
+//     console.log(a);
+//     console.log(b);
+// }
 
 
 

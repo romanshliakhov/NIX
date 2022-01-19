@@ -8,6 +8,22 @@
 // P.S. Подсказка: используйте split, чтобы разбить строку на массив символов, потом 
 // переделайте всё как нужно и методом join соедините обратно.
 
+// camelize("background-color") == 'backgroundColor';
+// camelize("list-style-image") == 'listStyleImage';
+// camelize("-webkit-transition") == 'WebkitTransition';
+
+
+// function camelize(str){
+//     let arr = str.split('-');
+//     let newArr = arr.map( (item, index)=> index == 0 ? item : item[0].toUpperCase() + item.slice(1) );
+//     return newArr.join('');
+// }
+  
+// console.log(camelize("list-style-image"));
+// console.log(camelize("background-color"));
+// console.log(camelize("-webkit-transition"));
+
+
 
 
 // Задание №2. Фильтрация по диапазону
@@ -20,6 +36,18 @@
 // alert( arr ); // 5,3,8,1 (без изменений)
 
 
+// function filterRange(arr, a, b) {
+//     return arr.filter(item => (a <= item && item <= b));
+//   }
+  
+// let arr = [17, 6, 15, 10, 1, 30];  
+// let filtered = filterRange(arr, 6, 15);
+
+// console.log(filtered);   
+// console.log(arr);
+
+
+
 
 // Задание №3 Фильтрация по диапазону «на месте»
 // Напишите функцию filterRangeInPlace(arr, a, b), которая принимает массив arr и удаляет из него все значения кроме тех, которые находятся между a и b. То есть, проверка имеет вид a ≤ arr[i] ≤ b.
@@ -30,12 +58,25 @@
 // alert( arr ); // [3, 1]
 
 
+// function filterRangeInPlace(arr, a, b) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] <= a || arr[i] >= b) {
+//           arr.splice(i, 1);   
+//           i--;
+//         } 
+//     }
+// }
+
+// let arr = [1, 3, 8, 10, -2, 84, 44, 85, 71, -1, -5, 9, 33];
+// filterRangeInPlace(arr, -10, 35);
+// console.log(arr);
+
 
 
 // Задание №4. Сортировать в порядке по убыванию
 // let arr = [5, 2, 1, -10, 8];
-// // ... ваш код для сортировки по убыванию
-// alert( arr ); // 8, 5, 2, 1, -10
+// arr.sort((a, b) => b - a);
+// console.log(arr); 
 
 
 
@@ -43,10 +84,18 @@
 // Задание №5. Скопировать и отсортировать массив
 // У нас есть массив строк arr. Нужно получить отсортированную копию, но оставить arr неизменённым.
 // Создайте функцию copySorted(arr), которая будет возвращать такую копию.
+
+// function copySorted(arr) {
+//     return arr.slice().sort();
+// }
+
 // let arr = ["HTML", "JavaScript", "CSS"];
 // let sorted = copySorted(arr);
-// alert( sorted ); // CSS, HTML, JavaScript
-// alert( arr ); // HTML, JavaScript, CSS (без изменений)
+
+// console.log(sorted); 
+// console.log(arr); 
+
+
 
 
 
@@ -68,6 +117,13 @@
 // alert( names ); // Вася, Петя, Маша
 
 
+// let tanya = { name: "Таня", age: 21 };
+// let ira = { name: "Ира", age: 38 };
+// let masha = { name: "Маша", age: 28 };
+// let users = [ tanya, ira, masha ];
+// let names = users.map(item => item.name);
+// console.log(names); 
+
 
 
 // Задание №8. Отсортировать пользователей по возрасту
@@ -84,6 +140,22 @@
 // alert(arr[2].name); // Петя
 
 
+// function sortByAge(users) {
+//     users.sort((a, b) => a.age - b.age);
+// }
+
+// let tanya = { name: "Таня", age: 21 };
+// let ira = { name: "Ира", age: 38 };
+// let masha = { name: "Маша", age: 28 };
+
+// let arr = [ tanya, ira, masha ];
+
+// sortByAge(arr);
+
+// console.log(arr[0].name); 
+// console.log(arr[1].name); 
+// console.log(arr[2].name); 
+
 
 
 // Задание №9. Получить средний возраст
@@ -96,6 +168,18 @@
 // let arr = [ vasya, petya, masha ];
 // alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
 
+// function getAverageAge(users) {
+//     return users.reduce((prev, user) => prev + user.age, 0) / users.length;
+// }
+
+
+// let tanya = { name: "Таня", age: 21 };
+// let ira = { name: "Ира", age: 38 };
+// let masha = { name: "Маша", age: 28 };
+
+// let arr = [ tanya, ira, masha ];
+
+// console.log(getAverageAge(arr)); 
 
 
 
@@ -104,12 +188,14 @@
 // Напишите функцию unique(arr), которая возвращает массив, содержащий только уникальные элементы arr.
 // Например:
 // function unique(arr) {
-//  /* ваш код */
+//     let arrUnique = [];
+//     for(let item of arr){
+//         if(!arrUnique.includes(item)) arrUnique.push(item);
+//     }
+//     return arrUnique;
 // }
-// let strings = ["кришна", "кришна", "харе", "харе",
-//  "харе", "харе", "кришна", "кришна", ":-O"
-// ];
-// alert( unique(strings) ); // кришна, харе, :-O
+// let strings = ["кришна", "кришна", "харе", "харе", "харе", "харе", "кришна", "кришна", ":-O" ];
+// console.log(unique(strings)); 
 
 
 
@@ -118,16 +204,19 @@
 // Задание №11. Фильтрация уникальных элементов массива
 // Допустим, у нас есть массив arr. 
 // Создайте функцию unique(arr), которая вернёт массив уникальных, не повторяющихся значений массива arr.
-// Например:
+
 // function unique(arr) {
-//  /* ваш код */
+//     let newSet = new Set(arr);
+//     let uniqueArr = [];
+//     for (let value of newSet) {
+//         uniqueArr.push(value);
+//     }
+//     return uniqueArr;
 // }
-// let values = ["Hare", "Krishna", "Hare", "Krishna",
-//  "Krishna", "Krishna", "Hare", "Hare", ":-O"
-// ];
-// alert( unique(values) ); // Hare,Krishna,:-O
-// P.S. Здесь мы используем строки, но значения могут быть любого типа.
-// P.P.S. Используйте Set для хранения уникальных значений.
+
+// let values = ["Hare", "Krishna", "Hare", "Krishna",  "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+// console.log(unique(values)); 
+
 
 
 
@@ -144,6 +233,17 @@
 // keys.push("more");
 // Почему? Что нужно поправить в коде, чтобы вызов keys.push сработал?
 
+// map.keys() возвращает итерируемый объект
+
+// let map = new Map();
+
+// map.set("name", "John");
+
+// let keys = Array.from(map.keys());
+
+// keys.push("more");
+
+// console.log(keys);
 
 
 
@@ -152,17 +252,20 @@
 // Здесь мы делаем два счётчика: counter и counter2, используя одну и ту же функцию makeCounter.
 // Они независимы? Что покажет второй счётчик? 0,1 или 2,3 или что-то ещё?
 // function makeCounter() {
-//  let count = 0;
-//  return function() {
-//  return count++;
-//  };
+//     let count = 0;
+//     return function() {
+//     return count++;
+//     };
 // }
+
 // let counter = makeCounter();
 // let counter2 = makeCounter();
-// alert( counter() ); // 0
-// alert( counter() ); // 1
-// alert( counter2() ); // ?
-// alert( counter2() ); // ?
+// console.log( counter() ); // 0
+// console.log( counter() ); // 1
+// console.log( counter2() ); // ?
+// console.log( counter2() ); // ?
+
+// Счетчики независимы, так как у них разное присванивание, поэтому функция будет работать отдельно от каждого. Покажут одинаковые результаты.
 
 
 
@@ -172,20 +275,22 @@
 // Здесь объект счётчика создан с помощью функции-конструктора.
 // Будет ли он работать? Что покажет?
 // function Counter() {
-//  let count = 0;
-//  this.up = function() {
-//  return ++count;
-//  };
-//  this.down = function() {
-//  return --count;
-//  };
+//     let count = 0;
+//     this.up = function() {
+//         return ++count;
+//     };
+//     this.down = function() {
+//         return --count;
+//     };
 // }
+
 // let counter = new Counter();
-// alert( counter.up() ); // ?
-// alert( counter.up() ); // ?
-// alert( counter.down() ); // ?
+// console.log(counter.up() ); // 1
+// console.log(counter.up() ); // 2
+// console.log(counter.down() ); // 1
 
 
+// Функция Counter будет работать. Будет показывать значение счётчика в зависимости от прибавление/убавления
 
 
 
@@ -202,3 +307,10 @@
 // Задача – написать функцию factorial(n), которая возвращает n!, используя рекурсию.
 // alert( factorial(5) ); // 120
 // P.S. Подсказка: n! можно записать как n * (n-1)! Например: 3! = 3*2! = 3*2*1! = 6
+
+
+// function factorial(n) {
+//     return (n != 1) ? n * factorial(n - 1) : 1;
+// }
+
+// console.log(factorial(5));

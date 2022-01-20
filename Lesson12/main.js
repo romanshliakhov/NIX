@@ -1,34 +1,40 @@
 // Задание №1. Дочерние элементы в DOM
-// Для страницы:
-// <html>
-// <body>
-//     <div>Пользователи:</div>
-//     <ul>
-//         <li>Джон</li>
-//         <li>Пит</li>
-//     </ul>
-// </body>
-// </html>
 // Как получить:
 // • Напишите код, который получит элемент <div>?
 // • Напишите код, который получит <ul>?
 // • Напишите код, который получит второй <li> (с именем Пит)?
-
+// console.log(document.body.firstElementChild);
+// console.log(document.body.children[1]);
+// console.log(document.body.children[1].lastElementChild);
 
 
 
 // Задание №2. Соседи
 // Если elem – произвольный узел DOM-элемента…
-// • Правда, что elem.lastChild.nextSibling всегда равен null?
-// • Правда, что elem.children[0].previousSibling всегда равен null ?
+// • Правда, что elem.lastChild.nextSibling всегда равен null? -- Правда, так elem.lastChild последний элемент в DOM, в следствии чего у нех нет последующего элемента
+// • Правда, что elem.children[0].previousSibling всегда равен null ? -- Нет, так как elem.children[0] это элемент, имеющий узщел ДО, который вернется через previousSibling
+
+
+
 // Задание №3. Выделите ячейки по диагонали
 // Напишите код, который выделит красным цветом все ячейки в таблице по диагонали.
-// Вам нужно получить из таблицы <table> все диагональные <td> и выделить их, 
-// используя код:
+// Вам нужно получить из таблицы <table> все диагональные <td> и выделить их, используя код:
 // // в переменной td находится DOM-элемент для тега <td>
 // td.style.backgroundColor = 'red';
 // Результат:
 
+// function getTable(){
+//    document.querySelectorAll('tr').forEach((item)=>{
+//       Array.from(item.children).forEach((element)=>{
+//          element.textContent = `${(item.rowIndex+1)} : ${(element.cellIndex+1)}`;
+//          if((item.rowIndex + 1) == (element.cellIndex + 1)){
+//                element.style.backgroundColor = "red";
+//          }
+//       });
+//    });
+// }
+
+// getTable();
 
 
 
@@ -41,42 +47,14 @@
 // • Первый input в этой форме.
 // • Последний input в этой форме.
 // Используйте код файла table.html и браузерные инструменты разработчика:
-// <html>
-// <body>
-//  <form name="search">
-//  <label>Search the site:
-//  <input type="text" name="search">
-//  </label>
-//  <input type="submit" value="Search!">
-//  </form>
-//  <hr>
-//  <form name="search-person">
-//  Search the visitors:
-//  <table id="age-table">
-//  <tr>
-//  <td>Age:</td>
-//  <td id="age-list">
-//  <label>
-//  <input type="radio" name="age" value="young">less than 18</label>
-//  <label>
-//  <input type="radio" name="age" value="mature">18-50</label>
-//  <label>
-//  <input type="radio" name="age" value="senior">more than 50</label>
-//  </td>
-//  </tr>
-//  <tr>
-//  <td>Additionally:</td>
-//  <td>
-//  <input type="text" name="info[0]">
-//  <input type="text" name="info[1]">
-//  <input type="text" name="info[2]">
-//  </td>
-//  </tr>
-//  </table>
-//  <input type="submit" value="Search!">
-//  </form>
-// </body>
-// </html>
+
+// console.log(document.querySelector('#age-table'));
+// console.log(document.querySelectorAll('#age-table label'));
+// console.log(document.querySelector('#age-table td'));
+// console.log(document.querySelector('form[name = "search"]'));
+// console.log(document.querySelector('form[name = "search"] input'));
+// let formInputs = document.querySelectorAll('form[name = "search"] input');
+// console.log(inputs[formInputs.length-1]);
 
 
 
@@ -86,18 +64,20 @@
 1. Какой в нём текст (без поддерева) ?
 2. Какое число потомков – всех вложенных <li> (включая глубоко вложенные) ? */
 
+// function showInfo(){
+//    for(let li of document.querySelectorAll('li')){
+//        console.log(li.textContent);
+//    }
+//    console.log(document.querySelectorAll('li').length);
+// };
+// showInfo();
 
 
 
-/* Задание №5. Свойство nodeType
-Что выведет этот код?
-<html>
-<body>
- <script>
-    alert(document.body.lastChild.nodeType);
- </script>
-</body>
-</html> */
+// Задание №5. Свойство nodeType
+// Что выведет этот код? -- 1
+// alert(document.body.lastChild.nodeType);
+
 
 
 
@@ -105,12 +85,12 @@
 
 
 // Задание №6. Тег в комментарии
-// Что выведет этот код?
-// <script>
+// Что выведет этот код? --- Выведет BODY. Комментарий будет первым и единственым элементом, поэтому body.firstChild.data вернет содержимое коментария
+
 //  let body = document.body;
 //  body.innerHTML = "<!--" + body.tagName + "-->";
-//  alert( body.firstChild.data ); // что выведет?
-// </script>
+//  alert( body.firstChild.data ); 
+
 
 
 
@@ -120,6 +100,7 @@
 // 1. Объектом какого класса является document?
 // 2. Какое место он занимает в DOM-иерархии?
 // 3. Наследует ли он от Node или от Element, или может от HTMLElement?
+
 
 
 

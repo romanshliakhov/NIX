@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <div class="randomizer">
+        <h1 class="randomizer__title">Генератор случайный чисел</h1>
+        <div class="randomizer__result" id="result"></div>
+        <div class="randomizer__item">
+            <span class="randomizer__text">Введите необходимое количество рандомных чисел</span>
+            <input type="text" id="count" value="1">
+        </div>
+        <div class="randomizer__item">
+            <span class="randomizer__text">Введите минимальное число</span>
+            <input type="text" id="min" value="0">
+        </div>
+        <div class="randomizer__item">
+            <span class="randomizer__text">Введите максимальное число</span>
+            <input type="text" id="max" value="10">
+        </div>
+        <button class="randomizer__btn">Сгенерировать</button>        
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ document.querySelector('.randomizer__btn').onclick = function(){
     for ( let i = 0; i < count; i++) {
         result.push(randomInteger(min, max));
     }       
-    document.querySelector('#result').innerHTML = result;
+    document.querySelector('#result').value = result;
     return result;
 };
 

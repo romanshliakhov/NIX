@@ -1,6 +1,11 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
+  font-family: 'Rubik', sans-serif;
+  font-size: 26px;
+  line-height: 32px;
+  background-color: #FDC400;
 }
 
 html {
@@ -20,6 +25,7 @@ html {
 h1 {
     text-align: center;
     margin-bottom: 40px;
+    
 }
 
 button {
@@ -37,12 +43,22 @@ input {
     padding: 10px;
 }
 
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .randomizer {    
-    margin: 0 auto;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 800px;
+  margin: auto auto;
+  border: 6px solid #EEA20D;
+  text-align: center;
+  border-radius: 12px;
+  padding: 10px;
+  background-color: #FFD47F;
 }
 
 .randomizer__item {
@@ -58,4 +74,22 @@ input {
 
 .randomizer__result {
     text-align: center;
+}
+
+.randomizer__btn {
+  padding: 15px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
+  line-height: 24px;  
+  border-radius: 20px;
+  border: 3px solid #EEA20D;  
+  background-color: #FDC400;
+  text-transform: uppercase;
+}
+
+.randomizer__btn:hover,
+.randomizer__btn:active {
+  background-color: rgba(253, 196, 0, 0.35);
+  color: #fff;
+  transition: 0.4s all;
 }
